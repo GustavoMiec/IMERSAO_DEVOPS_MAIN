@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: escola-api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Monta o código-fonte local no container para desenvolvimento com hot-reload.
+      - .:/app
